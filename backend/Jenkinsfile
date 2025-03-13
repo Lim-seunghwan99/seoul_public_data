@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('github-clone') {
+            steps {
+                git branch: 'develop', credentialsId: 'public_data_seoul', url: 'https://github.com/Lim-seunghwan99/seoul_public_data.git'
+            }
+        }
+    }
+}
